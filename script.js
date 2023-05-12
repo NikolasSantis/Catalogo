@@ -1,9 +1,6 @@
 // Trocar cor do botão do carrossel
 
 
-// Arrumar fonte do body
-
-
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');

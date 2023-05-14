@@ -240,18 +240,27 @@ h1 {
 
 
 .carousel_side_1 {
+    /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
+    /* anterior em relação ao lado do carrossel que o usuário irá  */
     margin-left: 0;
 }
 
 .carousel_side_2 {
-    margin-left: -1084px; 
+    /* Soma do tamanho do width do lado anterior, mais 20px */
+    /* da margin-right do último item do lado anterior  */ 
+    margin-left: -1104px;
 }
 
 .carousel_side_3 {
-    margin-left: -2168px;
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -2208px;
 }
 
 .carousel_side_4 {
-    margin-left: -3252px;
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -3312px;
+
 }
 

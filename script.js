@@ -1,13 +1,5 @@
 // Trocar cor do botão do carrossel
 
-// Adicionar uma classe com margem left para as primeras imagens do carrossel dos
-// itens populares, para que quando virar o carrossel, o quarto produto do lado 
-// anterior não ficar aparecendo  
-
-// Adicionar ação para os próximos dois lados do carrossel, pois ele trava no
-// segundo lado e não anda mais pra frente
-
-
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');
@@ -56,6 +48,14 @@ function leftPopularCarousel() {
         left_move_popular_carousel.classList.remove('carousel_side_3');
         left_move_popular_carousel.classList.add('carousel_side_2'); 
     }
+    else if (carousel_side === 4) {
+        carousel_side = 3;
+        left_move_popular_carousel.classList.remove('carousel_side_4');
+        left_move_popular_carousel.classList.add('carousel_side_3')
+    }
+    
+    changeOpacityNavigationButton();
+    
 }
 
 function rightPopularCarousel() {
@@ -68,14 +68,42 @@ function rightPopularCarousel() {
     }
     else if (carousel_side === 2) { 
         carousel_side = 3;
-        right_move_popular_carousel.classList('carousel_side_2');
-        right_move_popular_carousel.classList('carousel_side_3');
+        right_move_popular_carousel.classList.remove('carousel_side_2');
+        right_move_popular_carousel.classList.add('carousel_side_3');
     }
+    else if (carousel_side === 3) {
+        carousel_side = 4;
+        right_move_popular_carousel.classList.remove('carousel_side_3');
+        right_move_popular_carousel.classList.add('carousel_side_4');
+    }
+
+    changeOpacityNavigationButton();
+
 }
 
+function changeOpacityNavigationButton() {
+    
+    // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
 
+    if (carousel_side === 4) {
+        popular_right_arrow.removeAttribute('style', 'cursor: pointer');
+        popular_right_arrow.setAttribute('style', 'opacity: 0.5');
+    }
 
+    else if (carousel_side === 1) {
+        popular_left_arrow.removeAttribute('sytle','cursor: pointer');
+        popular_left_arrow.setAttribute('style', 'opacity: 0.5');
+    }
 
+    else {
+        popular_right_arrow.setAttribute('style', 'cursor: pointer');
+        popular_right_arrow.removeAttribute('style', 'opacity: 0.5');
 
+        popular_left_arrow.setAttribute('style', 'cursor: pointer');
+        popular_left_arrow.removeAttribute('style', 'opacity: 0.5');
+    }
+}    
+
+changeOpacityNavigationButton();
 popular_left_arrow.addEventListener('click', leftPopularCarousel);
 popular_right_arrow.addEventListener('click', rightPopularCarousel);

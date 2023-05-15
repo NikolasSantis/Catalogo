@@ -1,5 +1,13 @@
 // Trocar cor do botão do carrossel
 
+// Ajustar nome da variavel carousel_side para popular_carousel_side
+
+
+// Arrumar o class, para classe apenas de movimento de seus respectivos
+// carrosseis, pois nem todo carrossel é do mesmo tamanho, quando arrumar
+// os nomes das classes já estarão no arquivo script.js
+
+
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');
@@ -25,7 +33,7 @@ function nextImage() {
 // Fim primeiro slider 
 
 
-// Carrossel de produtos populares
+// Bloco Carrossel de produtos populares
 
 const popular_left_arrow = document.getElementById('popular_left_arrow');
 const popular_right_arrow = document.getElementById('popular_right_arrow');
@@ -33,7 +41,7 @@ const popular_right_arrow = document.getElementById('popular_right_arrow');
 let carousel_side = 1;
 
 
-// Funções para girar carrossel 
+// Funções para girar carrossel de itens populares
 
 function leftPopularCarousel() {
     let left_move_popular_carousel = document.getElementById('popular_items_carousel');
@@ -54,7 +62,7 @@ function leftPopularCarousel() {
         left_move_popular_carousel.classList.add('carousel_side_3')
     }
     
-    changeOpacityNavigationButton();
+    changeOpacityNavigationPopularItemsButton();
     
 }
 
@@ -77,11 +85,11 @@ function rightPopularCarousel() {
         right_move_popular_carousel.classList.add('carousel_side_4');
     }
 
-    changeOpacityNavigationButton();
+    changeOpacityNavigationPopularItemsButton();
 
 }
 
-function changeOpacityNavigationButton() {
+function changeOpacityNavigationPopularItemsButton() {
     
     // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
 
@@ -104,6 +112,53 @@ function changeOpacityNavigationButton() {
     }
 }    
 
-changeOpacityNavigationButton();
+changeOpacityNavigationPopularItemsButton();
 popular_left_arrow.addEventListener('click', leftPopularCarousel);
 popular_right_arrow.addEventListener('click', rightPopularCarousel);
+
+// Fim Bloco Carrossel de produtos populares
+
+
+// Bloco Carrossel Categorias 
+
+const categories_left_arrow = documet.getElementById('categories_left_arrow');
+const categoires_right_arrow = document.getElementById('categoires_rigt_arrow');
+
+let categories_carousel_side = 1;
+
+
+function leftCategoriesCarousel() {
+    let left_move_categories_carousel = document.getElementById('categories_carousel');
+
+    if (categories_carousel_side === 2) {   
+        left_move_categories_carousel.classList.remove('categories_carousel_side_2');
+        left_move_categories_carousel.classList.add('categories_carousel_side_1');
+    }
+    else if (categories_carousel_side === 3) {
+        left_move_categories_carousel.classList.remove('categories_carousel_side_3');
+        left_move_categories_carousel.classList.add('categories_carousel_side_2');
+    }
+
+}
+
+function rightSideOfCarousel() {
+    let right_move_categories_carousel = document.getElementById('categories_carousel');
+
+    if (categories_carousel_side === 1) {
+        right_move_categories_carousel.classList.remove('categories_carousel_side_1');
+        right_move_categories_carousel.classList.add('categories_carousel_side_2');
+    }
+    else if (categories_carousel_side === 2) {
+        right_move_categories_carousel.classList.remove('categories_carousel_side_2');
+        right_move_categories_carousel.classList.add('categories_carousel_side_3');
+    }
+}
+
+
+
+// Adicionar função mudança de opacidade do categories_carousel
+
+
+// Chamar mudança de opacidade do categories_carousel 
+// Adicionar evento de click seta esquerda
+// Adicionar evento de click seta direita

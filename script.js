@@ -3,9 +3,7 @@
 // Ajustar nome da variavel carousel_side para popular_carousel_side
 
 
-// Arrumar o class, para classe apenas de movimento de seus respectivos
-// carrosseis, pois nem todo carrossel é do mesmo tamanho, quando arrumar
-// os nomes das classes já estarão no arquivo script.js
+// COLOCAR MAIS FOTOS DE CATEGORIAS PRO CARROSSEL FICAR COMPLETA
 
 
 // Bloco para o primeiro slider da pagina 
@@ -93,17 +91,21 @@ function rightPopularCarousel() {
 
 function changeOpacityNavigationPopularItemsButton() {
     
-    // Se estiver no quarto ou primeiro lado do carrossel a seta irá ficar mais transparente
+    // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
 
     if (carousel_side === 4) {
         popular_right_arrow.removeAttribute('style', 'cursor: pointer');
         popular_right_arrow.setAttribute('style', 'opacity: 0.5');
     }
 
+    // Se estiver no primeiro lado do carrossel a seta irá ficar mais transparente
+
     else if (carousel_side === 1) {
         popular_left_arrow.removeAttribute('sytle','cursor: pointer');
         popular_left_arrow.setAttribute('style', 'opacity: 0.5');
     }
+
+    // Se estiver em algum dos lados do meio do carrossel, as setas ficaram normal
 
     else {
         popular_right_arrow.setAttribute('style', 'cursor: pointer');
@@ -133,7 +135,7 @@ let categories_carousel_side = 1;
 
 
 function leftCategoriesCarousel() {
-    let left_move_categories_carousel = document.getElementById('categories_carousel');
+    let left_move_categories_carousel = document.getElementById('categories_carousel_items');
 
     if (categories_carousel_side === 2) {   
         categories_carousel_side = 1;
@@ -150,10 +152,10 @@ function leftCategoriesCarousel() {
 }
 
 function rightCategoriesCarousel() {
-    let right_move_categories_carousel = document.getElementById('categories_carousel');
+    let right_move_categories_carousel = document.getElementById('categories_carousel_items');
 
     if (categories_carousel_side === 1) {
-        catgories_carousel_side = 2;
+        categories_carousel_side = 2;
         right_move_categories_carousel.classList.remove('categories_carousel_side_1');
         right_move_categories_carousel.classList.add('categories_carousel_side_2');
     }
@@ -162,26 +164,36 @@ function rightCategoriesCarousel() {
         right_move_categories_carousel.classList.remove('categories_carousel_side_2');
         right_move_categories_carousel.classList.add('categories_carousel_side_3');
     }
+
     changeOpacityNavigationCategoriesCarouselButton();
 }
 
 function changeOpacityNavigationCategoriesCarouselButton() {
 
-    // Se estiver no terceiro ou primeiro lado do carrossel a seta irá ficar mais transparente
+    // Se estiver no primeiro lado do carrossel a seta irá ficar mais transparente
 
     if (categories_carousel_side === 1) {
         categories_left_arrow.removeAttribute('style', 'cursor: pointer');
         categories_left_arrow.setAttribute('style','opacity: 0.5');
     }
+
+    // Se estiver no terceiro lado do carrossel a seta irá ficar mais transparente
+
     else if (categories_carousel_side === 3) {
-        categoires_right_arrow.removeAttribute('style', 'opacity: 0.5');
-        categoires_right_arrow.setAttribute('style','cursor: pointer');
+        categories_right_arrow.removeAttribute('style', 'cursor: pointer');
+        categories_right_arrow.setAttribute('style','opacity: 0.5');
     }
+
+    // Se estiver em algum dos lados do meio do carrossel, as setas ficaram normal
+
     else {
         categories_left_arrow.removeAttribute('style','opacity: 0.5');
         categories_left_arrow.setAttribute('style', 'cursor: pointer');
+
+        categories_right_arrow.removeAttribute('style','opacity: 0.5');
+        categories_right_arrow.setAttribute('style','cursor: pointer');
     }
-    console.log('aaaa');
+    console.log(categories_carousel_side);
 }
 
 

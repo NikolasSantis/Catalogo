@@ -62,9 +62,14 @@ h1 {
     overflow: hidden;
 }
 
-/* .mouseover {
-    background-color: rgb(51,51,51);
-} */
+#categories_carousel{
+    width: 850px;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
 
 .company_name {
     display: flex;
@@ -114,6 +119,8 @@ h1 {
     border-radius: 3px;
 }
 
+
+
 .title_row {
     color:rgb(255, 255, 255);
     display: flex;
@@ -136,7 +143,7 @@ h1 {
     margin-top: 50px;
 }
 
-.carousel_items {
+.carousel_popular_items {
     /* original width laptop: 1024p */
     display: flex;
     flex-direction: row;
@@ -211,10 +218,20 @@ h1 {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
     flex-direction: row;
-    width: 970px;
+    width: 950px;
     border-radius: 150px;
     padding: 10px 5px 50px 5px;
     margin: 45px 20px;
+}
+
+.carousel_categories {
+    /* original width laptop: 1024p */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 4396px;
+    transition-duration: 2s ;
 }
 
 .categories_box {
@@ -239,28 +256,50 @@ h1 {
 }
 
 
-.carousel_side_1 {
+
+    /* BLOCO DE CLASSES DE MUDANÇA DE LADO DOS "CARROSSÉIS". 
+    TODOS COM SEUS RESPECTIVOS CÁLCULOS DE PIXELS */
+
+
+
+    /* BLOCO DE CLASSES POPULAR_ITEMS */
+   
+.popular_items_carousel_side_1 {
     /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
     /* anterior em relação ao lado do carrossel que o usuário irá  */
     margin-left: 0;
 }
 
-.carousel_side_2 {
+.popular_items_carousel_side_2 {
     /* Soma do tamanho do width do lado anterior, mais 20px */
     /* da margin-right do último item do lado anterior  */ 
     margin-left: -1104px;
 }
 
-.carousel_side_3 {
+.popular_items_carousel_side_3 {
     /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
     /* (20px + 20px) por ser 2 lados anteriores */
     margin-left: -2208px;
 }
 
-.carousel_side_4 {
+.popular_items_carousel_side_4 {
     /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
     /* (20px + 20px) por ser 2 lados anteriores */
     margin-left: -3312px;
 
 }
 
+
+    /* BLOCO DE CLASSES CATEGORIES_CAROUSEL */
+
+.categories_carousel_side_1 {
+    margin-left: 0;
+}
+
+.categories_carousel_side_2 {
+    margin-left: -950px;
+}
+
+.categories_carousel_side_3 {
+    margin-left: -1900px;
+}

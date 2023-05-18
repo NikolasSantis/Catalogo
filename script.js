@@ -33,6 +33,8 @@ function nextImage() {
 // Fim primeiro slider 
 
 
+
+
 // Bloco Carrossel de produtos populares
 
 const popular_left_arrow = document.getElementById('popular_left_arrow');
@@ -48,18 +50,18 @@ function leftPopularCarousel() {
 
     if (carousel_side === 2) { 
         carousel_side = 1
-        left_move_popular_carousel.classList.remove('carousel_side_2');
-        left_move_popular_carousel.classList.add('carousel_side_1'); 
+        left_move_popular_carousel.classList.remove('popular_items_carousel_side_2');
+        left_move_popular_carousel.classList.add('popular_items_carousel_side_1'); 
     }
     else if (carousel_side === 3) {
         carousel_side = 2;
-        left_move_popular_carousel.classList.remove('carousel_side_3');
-        left_move_popular_carousel.classList.add('carousel_side_2'); 
+        left_move_popular_carousel.classList.remove('popular_items_carousel_side_3');
+        left_move_popular_carousel.classList.add('popular_items_carousel_side_2'); 
     }
     else if (carousel_side === 4) {
         carousel_side = 3;
-        left_move_popular_carousel.classList.remove('carousel_side_4');
-        left_move_popular_carousel.classList.add('carousel_side_3')
+        left_move_popular_carousel.classList.remove('popular_items_carousel_side_4');
+        left_move_popular_carousel.classList.add('popular_items_carousel_side_3');
     }
     
     changeOpacityNavigationPopularItemsButton();
@@ -71,18 +73,18 @@ function rightPopularCarousel() {
 
     if (carousel_side === 1) {
         carousel_side = 2;
-        right_move_popular_carousel.classList.remove('carousel_side_1')
-        right_move_popular_carousel.classList.add('carousel_side_2');
+        right_move_popular_carousel.classList.remove('popular_items_carousel_side_1');
+        right_move_popular_carousel.classList.add('popular_items_carousel_side_2');
     }
     else if (carousel_side === 2) { 
         carousel_side = 3;
-        right_move_popular_carousel.classList.remove('carousel_side_2');
-        right_move_popular_carousel.classList.add('carousel_side_3');
+        right_move_popular_carousel.classList.remove('popular_items_carousel_side_2');
+        right_move_popular_carousel.classList.add('popular_items_carousel_side_3');
     }
     else if (carousel_side === 3) {
         carousel_side = 4;
-        right_move_popular_carousel.classList.remove('carousel_side_3');
-        right_move_popular_carousel.classList.add('carousel_side_4');
+        right_move_popular_carousel.classList.remove('popular_items_carousel_side_3');
+        right_move_popular_carousel.classList.add('popular_items_carousel_side_4');
     }
 
     changeOpacityNavigationPopularItemsButton();
@@ -91,7 +93,7 @@ function rightPopularCarousel() {
 
 function changeOpacityNavigationPopularItemsButton() {
     
-    // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
+    // Se estiver no quarto ou primeiro lado do carrossel a seta irá ficar mais transparente
 
     if (carousel_side === 4) {
         popular_right_arrow.removeAttribute('style', 'cursor: pointer');
@@ -113,15 +115,18 @@ function changeOpacityNavigationPopularItemsButton() {
 }    
 
 changeOpacityNavigationPopularItemsButton();
+
 popular_left_arrow.addEventListener('click', leftPopularCarousel);
 popular_right_arrow.addEventListener('click', rightPopularCarousel);
 
 // Fim Bloco Carrossel de produtos populares
 
 
+
+
 // Bloco Carrossel Categorias 
 
-const categories_left_arrow = documet.getElementById('categories_left_arrow');
+const categories_left_arrow = document.getElementById('categories_left_arrow');
 const categoires_right_arrow = document.getElementById('categoires_rigt_arrow');
 
 let categories_carousel_side = 1;
@@ -131,34 +136,57 @@ function leftCategoriesCarousel() {
     let left_move_categories_carousel = document.getElementById('categories_carousel');
 
     if (categories_carousel_side === 2) {   
+        categories_carousel_side = 1;
         left_move_categories_carousel.classList.remove('categories_carousel_side_2');
         left_move_categories_carousel.classList.add('categories_carousel_side_1');
     }
     else if (categories_carousel_side === 3) {
+        categories_carousel_side = 2;
         left_move_categories_carousel.classList.remove('categories_carousel_side_3');
         left_move_categories_carousel.classList.add('categories_carousel_side_2');
     }
+    changeOpacityNavigationCategoriesCarouselButton();
 
 }
 
-function rightSideOfCarousel() {
+function rightCategoriesCarousel() {
     let right_move_categories_carousel = document.getElementById('categories_carousel');
 
     if (categories_carousel_side === 1) {
+        catgories_carousel_side = 2;
         right_move_categories_carousel.classList.remove('categories_carousel_side_1');
         right_move_categories_carousel.classList.add('categories_carousel_side_2');
     }
     else if (categories_carousel_side === 2) {
+        categories_carousel_side = 3;
         right_move_categories_carousel.classList.remove('categories_carousel_side_2');
         right_move_categories_carousel.classList.add('categories_carousel_side_3');
     }
+    changeOpacityNavigationCategoriesCarouselButton();
+}
+
+function changeOpacityNavigationCategoriesCarouselButton() {
+
+    // Se estiver no terceiro ou primeiro lado do carrossel a seta irá ficar mais transparente
+
+    if (categories_carousel_side === 1) {
+        categories_left_arrow.removeAttribute('style', 'cursor: pointer');
+        categories_left_arrow.setAttribute('style','opacity: 0.5');
+    }
+    else if (categories_carousel_side === 3) {
+        categoires_right_arrow.removeAttribute('style', 'opacity: 0.5');
+        categoires_right_arrow.setAttribute('style','cursor: pointer');
+    }
+    else {
+        categories_left_arrow.removeAttribute('style','opacity: 0.5');
+        categories_left_arrow.setAttribute('style', 'cursor: pointer');
+    }
+    console.log('aaaa');
 }
 
 
 
-// Adicionar função mudança de opacidade do categories_carousel
+changeOpacityNavigationCategoriesCarouselButton();
 
-
-// Chamar mudança de opacidade do categories_carousel 
-// Adicionar evento de click seta esquerda
-// Adicionar evento de click seta direita
+categories_left_arrow.addEventListener('click', leftCategoriesCarousel);
+categories_right_arrow.addEventListener('click', rightCategoriesCarousel);

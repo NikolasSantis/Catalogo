@@ -1,9 +1,7 @@
 // Trocar cor do botão do carrossel
 
-// Ajustar nome da variavel carousel_side para popular_carousel_side
 
-
-// COLOCAR MAIS FOTOS DE CATEGORIAS PRO CARROSSEL FICAR COMPLETA
+// ADICIONAR UM ESPAÇO PARA DECORAÇÕES
 
 
 // Bloco para o primeiro slider da pagina 
@@ -38,7 +36,7 @@ function nextImage() {
 const popular_left_arrow = document.getElementById('popular_left_arrow');
 const popular_right_arrow = document.getElementById('popular_right_arrow');
 
-let carousel_side = 1;
+let popular_carousel_side = 1;
 
 
 // Funções para girar carrossel de itens populares
@@ -46,18 +44,18 @@ let carousel_side = 1;
 function leftPopularCarousel() {
     let left_move_popular_carousel = document.getElementById('popular_items_carousel');
 
-    if (carousel_side === 2) { 
-        carousel_side = 1
+    if (popular_carousel_side === 2) { 
+        popular_carousel_side = 1
         left_move_popular_carousel.classList.remove('popular_items_carousel_side_2');
         left_move_popular_carousel.classList.add('popular_items_carousel_side_1'); 
     }
-    else if (carousel_side === 3) {
-        carousel_side = 2;
+    else if (popular_carousel_side === 3) {
+        popular_carousel_side = 2;
         left_move_popular_carousel.classList.remove('popular_items_carousel_side_3');
         left_move_popular_carousel.classList.add('popular_items_carousel_side_2'); 
     }
-    else if (carousel_side === 4) {
-        carousel_side = 3;
+    else if (popular_carousel_side === 4) {
+        popular_carousel_side = 3;
         left_move_popular_carousel.classList.remove('popular_items_carousel_side_4');
         left_move_popular_carousel.classList.add('popular_items_carousel_side_3');
     }
@@ -69,18 +67,18 @@ function leftPopularCarousel() {
 function rightPopularCarousel() {
     let right_move_popular_carousel = document.getElementById('popular_items_carousel');
 
-    if (carousel_side === 1) {
-        carousel_side = 2;
+    if (popular_carousel_side === 1) {
+        popular_carousel_side = 2;
         right_move_popular_carousel.classList.remove('popular_items_carousel_side_1');
         right_move_popular_carousel.classList.add('popular_items_carousel_side_2');
     }
-    else if (carousel_side === 2) { 
-        carousel_side = 3;
+    else if (popular_carousel_side === 2) { 
+        popular_carousel_side = 3;
         right_move_popular_carousel.classList.remove('popular_items_carousel_side_2');
         right_move_popular_carousel.classList.add('popular_items_carousel_side_3');
     }
-    else if (carousel_side === 3) {
-        carousel_side = 4;
+    else if (popular_carousel_side === 3) {
+        popular_carousel_side = 4;
         right_move_popular_carousel.classList.remove('popular_items_carousel_side_3');
         right_move_popular_carousel.classList.add('popular_items_carousel_side_4');
     }
@@ -93,14 +91,14 @@ function changeOpacityNavigationPopularItemsButton() {
     
     // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
 
-    if (carousel_side === 4) {
+    if (popular_carousel_side === 4) {
         popular_right_arrow.removeAttribute('style', 'cursor: pointer');
         popular_right_arrow.setAttribute('style', 'opacity: 0.5');
     }
 
     // Se estiver no primeiro lado do carrossel a seta irá ficar mais transparente
 
-    else if (carousel_side === 1) {
+    else if (popular_carousel_side === 1) {
         popular_left_arrow.removeAttribute('sytle','cursor: pointer');
         popular_left_arrow.setAttribute('style', 'opacity: 0.5');
     }

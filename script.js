@@ -1,7 +1,8 @@
 // Trocar cor do botão do carrossel
 
 
-// ADICIONAR UM ESPAÇO PARA DECORAÇÕES
+// COLOCAR UM TEXTO NO ENTRE OS CONTAINER DE INTERIOR E EXTERIOR
+// DAS DECORAÇÕES
 
 
 // Bloco para o primeiro slider da pagina 

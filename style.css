@@ -7,6 +7,7 @@ body {
     width: auto;
     height: 500vh;
     font-family: arial, 'Times New Roman', Times, serif;
+    margin: 0;
 }
 
 h1 {
@@ -18,6 +19,8 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* position: fixed; */
+    /* box-shadow: 0 5px 10px 0; */
     width: 100%;
     border-radius: 3px;
 }
@@ -314,11 +317,12 @@ h1 {
     flex-direction: row;
     padding: 0 25px;
     border-radius: 10px;
+    margin-bottom: 200px;
 }
 
 .decorations_outside {
     text-align: center;
-    margin-right: 300px;
+    margin-right: 100px;
 }
 
 .category_type_title {
@@ -335,7 +339,9 @@ h1 {
 }
 
 .decor_category_image {
-    width: 190px;
+    max-width: 220px;
+    height: 220px;
+    size: relative;
     border-radius: 2px;
 }
 
@@ -347,6 +353,19 @@ h1 {
 
 .decorations_inside {
     text-align: center;
-    /* margin-left: 50px; */
+    margin-left: 100px;
 }
 
+
+
+/* Footer  */
+
+.footer_box {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 400px;
+    bottom: 0;
+    text-align: center;
+    padding-top: 50px;
+}

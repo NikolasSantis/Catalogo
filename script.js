@@ -4,6 +4,8 @@
 // COLOCAR UM TEXTO NO ENTRE OS CONTAINER DE INTERIOR E EXTERIOR
 // DAS DECORAÇÕES
 
+// AJUSTAR FOOTER NO PÁGINA
+
 
 // Bloco para o primeiro slider da pagina 
 

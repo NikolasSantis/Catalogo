@@ -1,16 +1,6 @@
 // Trocar cor do botão do carrossel
 
 
-// COLOCAR UMA SECTIONS ANTES DO FOOTER PARA REDIRECIONAMENTO PARA
-// DÚVIDAS FREQUENTES
-
-
-// COLOCAR UM TEXTO NO ENTRE OS CONTAINER DE INTERIOR E EXTERIOR
-// DAS DECORAÇÕES
-
-// AJUSTAR FOOTER NO PÁGINA
-
-
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');
@@ -237,3 +227,4 @@ changeOpacityNavigationCategoriesCarouselButton();
 
 categories_left_arrow.addEventListener('click', leftCategoriesCarousel);
 categories_right_arrow.addEventListener('click', rightCategoriesCarousel);
+

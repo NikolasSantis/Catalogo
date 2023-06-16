@@ -1,5 +1,6 @@
 // Trocar cor do botão do carrossel
 
+// TROCAR NOME DO HTML DA PÁGINA INICIAL PARA HOME E DO CSS PARA HOME TBM
 
 // Bloco para o primeiro slider da pagina 
 

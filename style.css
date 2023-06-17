@@ -325,7 +325,6 @@ h1 {
     flex-direction: row;
     padding: 0 25px;
     border-radius: 10px;
-    margin-bottom: 200px;
 }
 
 .decorations_outside {
@@ -375,6 +374,7 @@ h1 {
     height: 300px;
     place-self: baseline normal;
     padding-top: 50px;
+    margin-top: 200px;
 }
 
 .footer_content_box {

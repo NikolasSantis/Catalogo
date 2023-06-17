@@ -9,18 +9,39 @@
 
 <body>
 
+    <!-- Header da página com o botão de menu e nome da empresa  -->
     <header id="top_row">
         <img id="menu_icon" src="./icons_produto/menu-icon.png" alt="Menu-icon" title="Botão Menu">
         <div id="company_name">
             <h1> Empresa </h1>
         </div>
     </header>
+    <!-- Fim Header  -->
 
+    <!-- Começo da página  -->
     <main>
-        <div id="product_container">
-            <!-- Local para colocar as outras imagens do produto  -->
 
-            <img class="product_img" src="demo_image/image.jpg">
+        <div id="product_container">
+
+            <!-- Local para colocar as outras imagens do produto  -->
+            <div id="images_product">
+
+                <div id="other_images_product">
+                    <img class="alternative_images" src="./demo_image/image.jpg" alt="Imagem do produto" title="Imagem do produto">
+
+                    <img class="alternative_images" src="./demo_image/image.jpg" alt="Imagem do produto" title="Imagem do produto">
+
+                    <img class="alternative_images" src="./demo_image/image.jpg" alt="Imagem do produto" title="Imagem do produto">
+
+                    <img class="alternative_images" src="./demo_image/image.jpg" alt="Imagem do produto" title="Imagem do produto">
+
+                </div>
+
+                <!-- Imagem principal do produto  -->
+                <img class="product_img" src="./demo_image/image.jpg" alt="Principal Imagem do Produto" title="Principal Imagem do Produto">
+
+            </div>
+
 
             <section class="product_initial_description">
 
@@ -34,13 +55,69 @@
 
                 <span> Parcelas </span>
 
-                <button id="buy_button"> Comprar </button>
+                <button id="buy_button" title="Botão de Comprar"> <big> Comprar </big> </button>
+
+                <button id="add_cart" title="Botão de Adicionar no Carrinho"> <big> Adicionar ao Carrinho </big> </button>
+
+                <div class="separator"></div>
+
+                <span class="aditional_info"> Espaço para uma ou mais informações adicionais </span>
 
             </section>
 
         </div>
 
     </main>
+
+
+    <!-- Rodapé da Página  -->
+    <footer class="footer_box">
+
+        <div class="footer_content_box">
+
+            <div class="footer_content">
+                <h4> Central de Atendimento </h4>
+                <p> <a> <small> Atendimento </small> </a> </p>
+                <p> <a> <small> Termos de compra e venda </small> </a> </p>
+                <p> <a> <small> Política de Privacidade </small> </a> </p>
+            </div>
+
+            <div class="footer_content">
+                <h4> Serviços </h4>
+                <p> <a> <small> Carnê Digital </small> </a> </p>
+                <p> <a> <small> Cartão da Loja </small> </a> </p>
+            </div>
+
+            <div class="footer_content">
+                <h4> Parcerias </h4>
+                <p> <a> <small> Seja nosso Parceiro </small> </a> </p>
+                <p> <a> <small> Venda seus Produtos </small> </a> </p>
+            </div>
+
+            <div class="footer_content">
+                <h4> Corporativo </h4>
+                <p> <a> <small> Quem somos </small> </a> </p>
+                <p> <a> <small> Trabalha conosco </small> </a> </p>
+                <p> <a> <small> Nossas Lojas </small> </a> </p>
+                <p> <a> <small> Investidores </small></a></p>
+            </div>
+
+            <div class="footer_content">
+                <h4> Compras Telefone </h4>
+                <p> <big> 0000 000 0000 </big> </p>
+            </div>
+            
+        </div>
+
+        <div class="copyright_box">
+            <div class="dividing_row"> </div>
+
+            <p> <span> Todos os Direitos Reservados © </span> </p>
+
+        </div>
+
+    </footer>
+    <!-- Fim Rodapé -->
 
 </body>
 </html>

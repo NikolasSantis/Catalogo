@@ -41,7 +41,7 @@ const popular_left_arrow = document.getElementById('popular_left_arrow');
 const popular_right_arrow = document.getElementById('popular_right_arrow');
 
 let popular_carousel_side = 1;
-
+ 
 
 // Funções para girar carrossel de itens populares
 

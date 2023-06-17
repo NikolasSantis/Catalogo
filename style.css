@@ -79,8 +79,7 @@ h1 {
     overflow: hidden;
 }
 
-
-
+/* CLASSES */
 
 .company_name {
     display: flex;
@@ -109,10 +108,6 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.slides input {
-    display: none
 }
 
 .slide {

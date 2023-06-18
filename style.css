@@ -22,6 +22,10 @@ h1 {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 #top_row {
     background-color: black;
     display: flex;

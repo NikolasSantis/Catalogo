@@ -136,17 +136,132 @@ h1 {
 }
 
 
+/* FIM CONTAINER PRODUTO  */
+
+/* CLASS AD  */
+
+.ad {
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    max-height: 150px;
+    margin: 50px 0 50px 0;
+}
+
+/* FIM CLASS AD  */
+
+/* RECOMENDADOS */
+
+#popular_items{
+    width: 1084px;
+    padding: 20px;
+    margin: 0 25px;
+    overflow: hidden;
+}
+
+.title_row {
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.popular_carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.navigation_buttons {
+    width: 50px;
+    height: 154px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.carousel_popular_items {
+    /* original width laptop: 1024p */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 4416px;
+    transition-duration: 2s ;
+}
+
+.item_container {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin-right: 20px;
+}
+
+.item_box {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 400px;
+}
+
+.item_img {
+    width: 225px;
+    height: 224px;
+    padding: 10px 7.5px;
+}
+
+.item_data {
+    padding-left: 2%;
+}
+
+.original_price {
+    color: rgb(63, 63, 63);
+    display: flex;
+    flex-direction: row;
+}
+
+.price_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;    
+}
+
+.item_price {
+    color: black;
+    max-width: 120px;
+    padding-right:5px;
+    margin: 2px 0;
+}
+
+.percentage_off {
+    color: red;
+    margin: 2px 20px;
+}
+
+.price_divison{
+    color: red;
+    margin: 2px 0;
+}
+
+.item_name {
+    color: black;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* FIM RECOMENDADOS */
 
 
 
-
-
-
-
-
-
-
-
+/* FOOTER  */
 
 .footer_box {
     background-color: black;

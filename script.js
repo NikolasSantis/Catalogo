@@ -2,6 +2,10 @@
 
 // TROCAR NOME DO HTML DA PÁGINA INICIAL PARA HOME E DO CSS PARA HOME TBM
 
+// ORGANIZAR AS CLASSES E IDs DO CSS E HTML, POIS HÁ CLASSES USADAS UMA VEZ SÓ
+
+
+
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');

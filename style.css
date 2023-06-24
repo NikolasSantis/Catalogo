@@ -129,7 +129,7 @@ a {
     border-radius: 3px;
 }
 
-
+/* ITENS POPULARES  */
 
 .title_row {
     color:rgb(255, 255, 255);
@@ -223,6 +223,8 @@ a {
     margin: 20px 0;
     overflow: hidden;
 }
+
+/* FIM POPULAR ITEMS  */
 
 .categories {
     background-color: rgba(255, 255, 255, 0.13);

@@ -26,6 +26,8 @@ a {
     text-decoration: none;
 }
 
+/* HEADER  */
+
 #top_row {
     background-color: black;
     display: flex;
@@ -52,6 +54,17 @@ a {
     width: inherit;
 }
 
+#text_container {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+
+/* FIM HEADER  */
+
+/* INITIAL SLIDER  */
+
 #slider_container {
     width: 80%;
     display: flex;
@@ -61,48 +74,24 @@ a {
     padding: 50px 0 0 200px;
 }
 
+#text_container {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
 
 #initial_slider_text {
     color: white;
 }
 
-#popular_items{
-    width: 1084px;
-    padding: 20px;
-    margin: 0 25px;
-    overflow: hidden;
-}
-
-#categories_carousel{
-    width: 850px;
-    margin: 0;
-    overflow: hidden;
-}
-
-/* CLASSES */
-
-.company_name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-}
-
-.text_container {
-    display: flex;
-    flex-direction: column;
-
-    width: 360px;
-}
-
-.slider {
+#slider {
     margin: 0 auto;
     width: 400px;
     height: 400px;
     overflow: hidden;
 }
 
-.slides {
+#slides {
     width: 400%;
     height: 400px;
     display: flex;
@@ -125,7 +114,24 @@ a {
     border-radius: 3px;
 }
 
-/* ITENS POPULARES  */
+/* FIM INITIAL SLIDER  */
+
+
+/* CARROSSEL DE ITENS POPULARES  */
+
+#popular_carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#popular_items{
+    width: 1084px;
+    padding: 20px;
+    margin: 0 25px;
+    overflow: hidden;
+}
 
 .title_row {
     color:rgb(255, 255, 255);
@@ -133,13 +139,6 @@ a {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-}
-
-.popular_carousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 50px;
 }
 
 .navigation_buttons {
@@ -220,9 +219,40 @@ a {
     overflow: hidden;
 }
 
-/* FIM POPULAR ITEMS  */
+/* CLASSES PARA MOVER O POPULAR CARROSSEL  */
 
-.categories {
+.popular_items_carousel_side_1 {
+    /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
+    /* anterior em relação ao lado do carrossel que o usuário irá  */
+    margin-left: 0;
+}
+
+.popular_items_carousel_side_2 {
+    /* Soma do tamanho do width do lado anterior, mais 20px */
+    /* da margin-right do último item do lado anterior  */ 
+    margin-left: -1104px;
+}
+
+.popular_items_carousel_side_3 {
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -2208px;
+}
+
+.popular_items_carousel_side_4 {
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -3312px;
+
+}
+
+/* FIM POPULAR ITENS  */
+
+
+
+/* CATEGORIES  */
+
+#categories {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
     flex-direction: row;
@@ -231,6 +261,12 @@ a {
     border-radius: 150px;
     padding: 10px 5px 42px 5px;
     margin: 45px 20px;
+}
+
+#categories_carousel{
+    width: 850px;
+    margin: 0;
+    overflow: hidden;
 }
 
 .carousel_categories {
@@ -264,42 +300,7 @@ a {
     font-size: 20px;
 }
 
-
-
-    /* BLOCO DE CLASSES DE MUDANÇA DE LADO DOS "CARROSSÉIS". 
-    TODOS COM SEUS RESPECTIVOS CÁLCULOS DE PIXELS */
-
-
-
-    /* BLOCO DE CLASSES POPULAR_ITEMS */
-   
-.popular_items_carousel_side_1 {
-    /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
-    /* anterior em relação ao lado do carrossel que o usuário irá  */
-    margin-left: 0;
-}
-
-.popular_items_carousel_side_2 {
-    /* Soma do tamanho do width do lado anterior, mais 20px */
-    /* da margin-right do último item do lado anterior  */ 
-    margin-left: -1104px;
-}
-
-.popular_items_carousel_side_3 {
-    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
-    /* (20px + 20px) por ser 2 lados anteriores */
-    margin-left: -2208px;
-}
-
-.popular_items_carousel_side_4 {
-    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
-    /* (20px + 20px) por ser 2 lados anteriores */
-    margin-left: -3312px;
-
-}
-
-
-    /* BLOCO DE CLASSES CATEGORIES_CAROUSEL */
+/* BLOCO DE CLASSES PARA MOVER O CARROSSEL  */
 
 .categories_carousel_side_1 {
     margin-left: 0;
@@ -313,10 +314,13 @@ a {
     margin-left: -1700px;
 }
 
+/* FIM CATEGORIES CARROSSEL  */
+
+
 
 /* Decorations Section */
 
-.decorations_container {
+#decorations_container {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
     flex-direction: row;
@@ -324,9 +328,18 @@ a {
     border-radius: 10px;
 }
 
-.decorations_outside {
+#decorations_outside {
     text-align: center;
     margin-right: 100px;
+}
+
+#decorations_inside {
+    text-align: center;
+    margin-left: 100px;
+}
+
+.decoration_categorie {
+    margin: 5px 10px;
 }
 
 .category_type_title {
@@ -336,10 +349,6 @@ a {
 .decoration_categories_container {
     display: flex;
     flex-direction: row;
-}
-
-.decoration_categorie {
-    margin: 5px 10px;
 }
 
 .decor_category_image {
@@ -355,16 +364,11 @@ a {
 }
 
 
-.decorations_inside {
-    text-align: center;
-    margin-left: 100px;
-}
-
 
 
 /* Footer  */
 
-.footer_box {
+#footer_box {
     background-color: black;
     color: white;
     width: 100%;
@@ -374,7 +378,7 @@ a {
     margin-top: 200px;
 }
 
-.footer_content_box {
+#footer_content_box {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -398,3 +402,5 @@ a {
     height: 1px;
     width: 700px;
 }
+
+/* FIM FOOTER */

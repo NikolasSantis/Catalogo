@@ -154,7 +154,14 @@ a {
 
 /* RECOMENDADOS */
 
-#popular_items{
+.popular_carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.popular_items{
     width: 1084px;
     padding: 20px;
     margin: 0 25px;
@@ -167,13 +174,6 @@ a {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-}
-
-.popular_carousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 50px;
 }
 
 .navigation_buttons {
@@ -254,7 +254,36 @@ a {
     overflow: hidden;
 }
 
+/* CLASSES PARA MOVER O POPULAR CARROSSEL  */
+
+.popular_items_carousel_side_1 {
+    /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
+    /* anterior em relação ao lado do carrossel que o usuário irá  */
+    margin-left: 0;
+}
+
+.popular_items_carousel_side_2 {
+    /* Soma do tamanho do width do lado anterior, mais 20px */
+    /* da margin-right do último item do lado anterior  */ 
+    margin-left: -1104px;
+}
+
+.popular_items_carousel_side_3 {
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -2208px;
+}
+
+.popular_items_carousel_side_4 {
+    /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
+    /* (20px + 20px) por ser 2 lados anteriores */
+    margin-left: -3312px;
+
+}
+
 /* FIM RECOMENDADOS */
+
+
 
 /* FICHA TÉCNINA  */
 
@@ -274,17 +303,17 @@ a {
 
 /* FOOTER  */
 
-.footer_box {
+#footer_box {
     background-color: black;
     color: white;
     width: 100%;
     height: 300px;
     place-self: baseline normal;
     padding-top: 50px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
-.footer_content_box {
+#footer_content_box {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

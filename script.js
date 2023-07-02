@@ -2,10 +2,6 @@
 
 // TROCAR NOME DO HTML DA PÁGINA INICIAL PARA HOME E DO CSS PARA HOME TBM
 
-// ORGANIZAR AS CLASSES E IDs DO CSS E HTML, POIS HÁ CLASSES USADAS UMA VEZ SÓ
-
-
-
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');
@@ -110,13 +106,13 @@ function changeOpacityNavigationPopularItemsButton() {
 
     
 
-    // Se estiver no quarto lado do carrossel a seta irá ficar mais transparente
+    // Se estiver no quarto lado do carrossel a seta direita irá ficar mais transparente
     if (popular_carousel_side === 4) {
         popular_right_arrow.removeAttribute('style', 'cursor: pointer');
         popular_right_arrow.setAttribute('style', 'opacity: 0.5');
     }
 
-    // Se estiver no primeiro lado do carrossel a seta irá ficar mais transparente
+    // Se estiver no primeiro lado do carrossel a seta esquerda irá ficar mais transparente
     else if (popular_carousel_side === 1) {
         popular_left_arrow.removeAttribute('sytle','cursor: pointer');
         popular_left_arrow.setAttribute('style', 'opacity: 0.5');

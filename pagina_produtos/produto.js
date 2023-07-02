@@ -18,8 +18,8 @@ function leftRecommendedCarousel() {
     // Bloco de condições para giro esquerdo
     if (recommended_carousel_side === 2) {
         recommended_carousel_side = 1;
-        left_move_recommended.classList.remove('medium_carousel_side_2');
-        left_move_recommended.classList.add('medium_carousel_side_1');
+        left_move_recommended_carousel.classList.remove('medium_carousel_side_2');
+        left_move_recommended_carousel.classList.add('medium_carousel_side_1');
     }
 
     else if (recommended_carousel_side === 3) {
@@ -104,10 +104,10 @@ recommended_right_arrow.addEventListener('click', rightRecommendedCarousel);
 
 // Bloco carrossel de Semelhantes
 
-const similar_left_arrow = document.getElementById('simiilar_left_arrow');
-const similar_right_arrow = document.getElementById('simlar_right_arrow');
+const similar_left_arrow = document.getElementById('similar_left_arrow');
+const similar_right_arrow = document.getElementById('similar_right_arrow');
 
-let simlar_carousel_side = 1;
+let similar_carousel_side = 1;
 
 
 // Funções para girar carrossel de itens semelhantes
@@ -133,7 +133,7 @@ function leftSimilarCarousel() {
     else if (similar_carousel_side === 4) {
         similar_carousel_side = 3;
         left_move_similar_carousel.classList.remove('medium_carousel_side_4');
-        left_move_similar_carousel.classList.add('meidum_carousel_side_3');
+        left_move_similar_carousel.classList.add('medium_carousel_side_3');
     }
 
     // Para mudar as setas quando a ação for realizada
@@ -153,7 +153,7 @@ function rightSimilarCarousel() {
     }
 
     else if (similar_carousel_side === 2) {
-        simlar_carousel_side = 3;
+        similar_carousel_side = 3;
         right_move_similar_carousel.classList.remove('medium_carousel_side_2');
         right_move_similar_carousel.classList.add('medium_carousel_side_3');
     }
@@ -183,7 +183,7 @@ function changeOpacityNavigationsSimilarCarousel() {
     // Se estiver no primeiro lado do carrossel a seta esquerda irá ficar mais transparente
     else if (similar_carousel_side === 1) {
         similar_left_arrow.removeAttribute('style', 'cursor: pointer');
-        similar_left_arrow.setAttribute('sytle', 'opacity: 0.5');
+        similar_left_arrow.setAttribute('style', 'opacity: 0.5');
     }
 
     // Se estiver em algum dos lados do meio do carrossel, as setas ficaram normal 

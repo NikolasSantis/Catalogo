@@ -130,6 +130,9 @@ a {
 
 .aditional_info {
     margin-top: 30px;
+    width: 480px;
+    max-height: 167px;
+    overflow-y: auto;
 }
 
 
@@ -292,11 +295,10 @@ a {
     color: black;
     font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
     width: 1080px;
-    height: auto;
-    max-height: 500px;
+    max-height: 740px;
     padding: 20px;
     border-radius: 5px;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 

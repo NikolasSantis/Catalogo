@@ -201,3 +201,24 @@ changeOpacityNavigationsSimilarCarousel();
 
 similar_left_arrow.addEventListener('click', leftSimilarCarousel);
 similar_right_arrow.addEventListener('click', rightSimilarCarousel);
+
+
+// Bloco para dar zoom na main image 
+
+const box_main_image = document.getElementById('box_main_image');
+const main_image = document.getElementById('main_image');
+
+box_main_image.addEventListener('mousemove', (e) => {
+
+    const x = e.clientX - e.target.offsetLeft;
+    const y = e.clientY - e.target.offsetTop;
+
+    main_image.style.transformOrigin = `${x}px ${y}px`;
+    main_image.style.transform = "scale(1.5)";
+});
+
+box_main_image.addEventListener('mouseleave', () => {
+
+    main_image.style.transformOrigin = 'center center';
+    main_image.style.transform = 'scale(1)';
+});

@@ -63,6 +63,47 @@ a {
 
 /* FIM HEADER  */
 
+/* BARRA LATERAL  */
+
+#sidebar_container {
+    display: none;
+    place-self: start;
+}
+
+#sidebar {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: medium;
+    max-width: 160px;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 20px;
+}
+
+/* width scrollbar (sidebar) */
+#sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+  
+/* Track */
+#sidebar::-webkit-scrollbar-track {
+    background: black; 
+}
+   
+/* Handle */
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
 /* INITIAL SLIDER  */
 
 #slider_container {

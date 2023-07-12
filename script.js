@@ -2,6 +2,8 @@
 
 // TROCAR NOME DO HTML DA PÁGINA INICIAL PARA HOME E DO CSS PARA HOME TBM
 
+// MUDAR OS COMENTÁRIOS PARA PORTUGUÊS BRASILEIRO 
+
 // Bloco para o primeiro slider da pagina 
 
 const slides = document.getElementById('slide');

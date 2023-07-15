@@ -83,6 +83,7 @@ a {
     left: -300px;
     height: 100vh;
     transition: all 0.5s;
+    overflow: auto;
 }
 
 #ul_sidebar {
@@ -94,23 +95,23 @@ a {
 }
 
 /* width scrollbar (sidebar) */
-#ul_sidebar::-webkit-scrollbar {
-    width: 3px;
+#sidebar_container::-webkit-scrollbar {
+    width: 9px;
 }
   
 /* Track */
-#ul_sidebar::-webkit-scrollbar-track {
+#sidebar_container::-webkit-scrollbar-track {
     background: black; 
 }
    
 /* Handle */
-#ul_sidebar::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
+#sidebar_container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
 }
   
 /* Handle on hover */
-#ul_sidebar::-webkit-scrollbar-thumb:hover {
+#sidebar_container::-webkit-scrollbar-thumb:hover {
     background: white;
 }
 

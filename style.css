@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+aside {
+    align-self: start;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -41,8 +45,6 @@ a {
 
 #menu_icon {
     width: 50px;
-    margin-left: 15px;
-    border-radius: 25px;
     cursor: pointer;
 }
 
@@ -66,35 +68,33 @@ a {
 /* BARRA LATERAL  */
 
 #sidebar_container {
-    display: none;
-    place-self: start;
+    background-color: rgba(16, 16, 16, 0.5);
+    position: absolute;
+    width: 350px;
+    left: -350px;
+    height: 100vh;
+    transition: all 0.5s;
 }
 
-#sidebar {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: medium;
-    max-width: 160px;
-    max-height: 100vh;
-    overflow: auto;
-    padding: 20px;
+#ul_sidebar {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
 }
 
 /* width scrollbar (sidebar) */
-#sidebar::-webkit-scrollbar {
+#ul_sidebar::-webkit-scrollbar {
     width: 3px;
 }
   
 /* Track */
-#sidebar::-webkit-scrollbar-track {
+#ul_sidebar::-webkit-scrollbar-track {
     background: black; 
 }
    
 /* Handle */
-#sidebar::-webkit-scrollbar-thumb {
+#ul_sidebar::-webkit-scrollbar-thumb {
     background: rgb(255, 255, 255);
     border-radius: 5px;
 }
@@ -102,6 +102,31 @@ a {
 /* Handle on hover */
 #sidebar::-webkit-scrollbar-thumb:hover {
     background: white;
+}
+
+#sidebar_button[type="checkbox"] {
+    display: none;
+}
+
+#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
+    transform: translateX(350px);
+}
+
+.url_sidebar {
+    display: block;
+    color: white;
+    padding: 20px 5px;
+}
+
+.url_sidebar:hover {
+    background-color: blueviolet;
+    color: black;
+}
+
+#label_sidebar_button {
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
 }
 
 /* INITIAL SLIDER  */

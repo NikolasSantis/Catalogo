@@ -12,6 +12,9 @@ body {
 
 aside {
     align-self: start;
+    display: flex;
+    position: fixed;
+    z-index: 3;
 }
 
 main {
@@ -37,10 +40,11 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* position: fixed;
-    box-shadow: 0 5px 10px 0; */
+    position: fixed;
+    box-shadow: 0 5px 10px 0;
     width: 100%;
     border-radius: 3px;
+    z-index: 2;
 }
 
 #menu_icon {
@@ -70,8 +74,8 @@ a {
 #sidebar_container {
     background-color: rgba(16, 16, 16, 0.5);
     position: absolute;
-    width: 350px;
-    left: -350px;
+    width: 300px;
+    left: -300px;
     height: 100vh;
     transition: all 0.5s;
 }
@@ -81,6 +85,7 @@ a {
     position: absolute;
     width: 100%;
     top: 70px;
+    padding: 0;
 }
 
 /* width scrollbar (sidebar) */
@@ -100,7 +105,7 @@ a {
 }
   
 /* Handle on hover */
-#sidebar::-webkit-scrollbar-thumb:hover {
+#ul_sidebar::-webkit-scrollbar-thumb:hover {
     background: white;
 }
 
@@ -109,17 +114,18 @@ a {
 }
 
 #sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
-    transform: translateX(350px);
+    transform: translateX(300px);
 }
 
 .url_sidebar {
     display: block;
     color: white;
+    text-align: center;
     padding: 20px 5px;
 }
 
 .url_sidebar:hover {
-    background-color: blueviolet;
+    background-color: rgb(200, 250, 245);
     color: black;
 }
 

@@ -1,3 +1,5 @@
+/* Bloco de propriedades de tags */
+
 body {
     background-color: rgb(7, 65, 122);
     display: flex;
@@ -38,44 +40,15 @@ a {
     text-decoration: none;
 }
 
-/* HEADER  */
 
-#top_row {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    box-shadow: 0 5px 10px 0;
-    width: 100%;
-    border-radius: 3px;
-    z-index: 2;
-}
+/* Barra lateral com webkit */
 
 #menu_icon {
     width: 50px;
     cursor: pointer;
 }
 
-#company_name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: inherit;
-}
-
-#text_container {
-    display: flex;
-    flex-direction: column;
-    width: 360px;
-}
-
-
-/* FIM HEADER  */
-
-/* BARRA LATERAL  */
-
+/* Propriedades da barra lateral */
 #sidebar_container {
     background-color: rgba(16, 16, 16, 0.5);
     position: absolute;
@@ -86,6 +59,7 @@ a {
     overflow: auto;
 }
 
+/* Propriedades da lista (ul) da bara lateral  */
 #ul_sidebar {
     list-style: none;
     position: absolute;
@@ -94,31 +68,33 @@ a {
     padding: 0;
 }
 
-/* width scrollbar (sidebar) */
+/* width scrollbar ou largura do scroll da barra lateral */
 #sidebar_container::-webkit-scrollbar {
     width: 9px;
 }
   
-/* Track */
+/* Track ou fundo da barra lateral */
 #sidebar_container::-webkit-scrollbar-track {
     background: black; 
 }
    
-/* Handle */
+/* Handle ou cursor da barra lateral */
 #sidebar_container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 3px;
 }
   
-/* Handle on hover */
+/* Handle on hover ou cursor da barra lateral quando segurado */
 #sidebar_container::-webkit-scrollbar-thumb:hover {
     background: white;
 }
 
+/* Irá fazer o botão desaparecer para melhor interface */
 #sidebar_button[type="checkbox"] {
     display: none;
 }
 
+/* Fará com que a barra lateral apareça na tela quando o botão receber click */
 #sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
     transform: translateX(300px);
 }
@@ -141,8 +117,40 @@ a {
     z-index: 1;
 }
 
-/* INITIAL SLIDER  */
 
+/* Header  */
+
+/* Propriedades do header  */
+#top_row {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0 5px 10px 0;
+    width: 100%;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+#company_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: inherit;
+}
+
+#text_container {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+
+/* Slider inicial */
+
+/* Propriedades do bloco de slider  */
 #slider_container {
     width: 80%;
     display: flex;
@@ -152,15 +160,18 @@ a {
     padding: 50px 0 0 200px;
 }
 
-#text_container {
+/* Todo o texto do slider, incluindo título */
+#text_slider_container {
     display: flex;
     flex-direction: column;
     width: 360px;
 }
 
+/* Parágrafo do slider  */
 #initial_slider_text {
     color: white;
 }
+
 
 #slider {
     margin: 0 auto;
@@ -191,8 +202,6 @@ a {
     height: 350px;
     border-radius: 3px;
 }
-
-/* FIM INITIAL SLIDER  */
 
 
 /* CARROSSEL DE ITENS POPULARES  */
@@ -392,12 +401,10 @@ a {
     margin-left: -1700px;
 }
 
-/* FIM CATEGORIES CARROSSEL  */
-
-
 
 /* Decorations Section */
 
+/* Propriedades do container de decorações */
 #decorations_container {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
@@ -406,29 +413,35 @@ a {
     border-radius: 10px;
 }
 
+/* Secção para as decorações para o lado de fora da casa  */
 #decorations_outside {
     text-align: center;
     margin-right: 100px;
 }
 
+/* Secção para as decorações para o lado de dentro da casa  */
 #decorations_inside {
     text-align: center;
     margin-left: 100px;
 }
 
-.decoration_categorie {
-    margin: 5px 10px;
-}
-
+/* Título da categoria  */
 .category_type_title {
     color: white;
 }
 
+/* Alinha os elemtos de produtos */
 .decoration_categories_container {
     display: flex;
     flex-direction: row;
 }
 
+/* Container individual de produto  */
+.decoration_categorie {
+    margin: 5px 10px;
+}
+
+/* Configura tamanho de imagem  */
 .decor_category_image {
     max-width: 220px;
     height: 220px;
@@ -436,6 +449,7 @@ a {
     border-radius: 2px;
 }
 
+/* Nome da categoria ou nome do produto */
 .decoration_category_name {
     color: white;
     text-align: center;

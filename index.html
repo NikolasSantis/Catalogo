@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
+    <script src="./script.js" defer> </script>
 
     <title> Catálgo de móveis </title>
 </head>
 
 <body>
 
+    <!-- Barra lateral  -->
     <aside>
         <!-- Botão da sidebar  -->
         <input type="checkbox" id="sidebar_button">
@@ -20,78 +22,52 @@
         </label>
 
 
-        <!-- Navegação da SideBar  -->
+        <!-- Navegação da sideBar  -->
         <nav id="sidebar_container">
             <ul id="ul_sidebar">
                 <li> <a href="" class="url_sidebar"> HOME </a> </li>
                 <li> <a href="" class="url_sidebar"> NOVIDADES </a> </li>
                 <li> <a href="" class="url_sidebar"> CONTATO </a> </li>
                 <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
-                <li> <a href="" class="url_sidebar"> SOBRE </a> </li>
             </ul>
         </nav>
     </aside>
 
 
-    <!-- Header da Página com botão da sidebar e a sidebar junto -->
+    <!-- Header da página com o nome da empresa -->
     <header id="top_row">
-        <div id="company_name">
-            <h1> Empresa </h1>
-        </div>
+        <h1 id="company_name"> Empresa </h1>
     </header>
-
 
 
     <!-- Conteúdo da Página  -->
     <main>
 
+        <!-- Slider container. Não interativo  -->
         <section id="slider_container">
-            <!-- Slider container  -->
-
 
             <!-- Uma mensagem dentro do container do slider  -->
-            <div id="text_container">
+            <div id="text_slider_container">
+
                 <h1> Móveis ideais para você</h1>
 
+                <!-- Texto de "Apresentação" da empresa no slider inicial  -->
                 <p id="initial_slider_text">
                     Aqui você encontra o móvel ideal para a sua residência. Contando com uma
                     grande de variedade de produtos, aprensentamos diversos tipos e modelos de móceis ideais para você.
                     Proporcionando várias possibilidades de mobílias completas.
                 </p>
-
             </div>
 
-
+            <!-- Janela que irá "exibir" as imagens do slider -->
             <div id="slider">
 
+                <!-- Linha com todas as imagens do slider na horizontal -->
                 <div id="slides" class="slides">
 
-                    <!-- Slide images -->
+                    <!-- Possui algumas "div" para um efeito de transição diferente -->
                     <div id="slide" class="slide">
-                        <img id="img_1" src="./móveis/Cadeira Cuna (A).jpg" alt="Cadeira Cuna">
+                        <img src="./móveis/Cadeira Cuna (A).jpg" alt="Cadeira Cuna">
                     </div>
 
                     <div class="slide">
@@ -105,14 +81,10 @@
                     <div class="slide">
                         <img src="./móveis/Painel para TV.jpg" alt="Painel para TV">
                     </div>
-
-                    <!-- Fim Slide Images -->
-
                 </div>
 
             </div>
 
-            <!-- Fim Slider container  -->
         </section>
 
 
@@ -896,49 +868,56 @@
 
         <h2 class="title_row"> Decorações </h2>
 
+        <!-- Container de todo o espaço do bloco -->
         <section id="decorations_container">
 
-            <!-- Decorações do lado de fora da casa  -->
+            <!-- Secção de decorações para o exterior da casa  -->
             <div id="decorations_outside">
+
+                <!-- Título da categoria de decoração  -->
                 <h3 class="category_type_title"> Exterior </h3>
 
 
-                <!-- Bloco Categorias de Decorações de Fora -->
+                <!-- 1° linha de secção de categorias de decoração exterior -->
                 <div class="decoration_categories_container">
 
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg">
+                        </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
-
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg">
+                        </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
                 </div>
 
-
+                <!-- 2° linha de secção de categorias de decoração de exterior -->
                 <div class="decoration_categories_container">
 
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
                         <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
                                 src="./icons/decorations/image.jpg"> </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
-
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
                         <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
                                 src="./icons/decorations/image.jpg"> </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
 
@@ -946,50 +925,56 @@
 
             </div>
 
-
+            <!-- Secção de decorações para o interior da casa  -->
             <div id="decorations_inside">
 
-                <!-- Decorações do lado de dentro da casa  -->
+                <!-- Título de categoria de decoração -->
                 <h3 class="category_type_title"> Interior </h3>
 
 
-                <!-- Bloco Categorias de Decorações de Dentro -->
+                <!-- 1° linha de secção de categorias de decoração interior -->
                 <div class="decoration_categories_container">
 
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg">
+                        </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
-
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg">
+                        </a>
 
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categorria </p>
                     </div>
 
                 </div>
 
+
+                <!-- 2° linha de secção de categorias de decoração de interior -->
                 <div class="decoration_categories_container">
 
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg"> 
+                        </a>
 
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
-
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
-
+                    <!-- Container individual de produto  -->
                     <div class="decoration_categorie">
+                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> 
+                            <img src="./icons/decorations/image.jpg">
+                        </a>
 
-                        <a href="./pagina_produtos/produto.html" class="decor_category_image"> <img
-                                src="./icons/decorations/image.jpg"> </a>
-
-                        <p class="decoration_category_name"> Nome do produto </p>
+                        <p class="decoration_category_name"> Nome da categoria </p>
                     </div>
 
                 </div>
@@ -1000,12 +985,14 @@
 
     </main>
 
-    <!-- Rodapé da Página  -->
 
+    <!-- Rodapé da Página  -->
     <footer id="footer_box">
 
+        <!-- Todo o conteúdo de um rodapé  -->
         <div id="footer_content_box">
 
+            <!-- As URLs da Central de Atendimento  -->
             <div class="footer_content">
                 <h4> Central de Atendimento </h4>
                 <p> <a> <small> Atendimento </small> </a> </p>
@@ -1013,18 +1000,21 @@
                 <p> <a> <small> Política de Privacidade </small> </a> </p>
             </div>
 
+            <!-- As URLs dos Serviços  -->
             <div class="footer_content">
                 <h4> Serviços </h4>
                 <p> <a> <small> Carnê Digital </small> </a> </p>
                 <p> <a> <small> Cartão da Loja </small> </a> </p>
             </div>
 
+            <!-- As URLs de Parcerias  -->
             <div class="footer_content">
                 <h4> Parcerias </h4>
                 <p> <a> <small> Seja nosso Parceiro </small> </a> </p>
                 <p> <a> <small> Venda seus Produtos </small> </a> </p>
             </div>
 
+            <!-- As URLs dos Corporativos -->
             <div class="footer_content">
                 <h4> Corporativo </h4>
                 <p> <a> <small> Quem somos </small> </a> </p>
@@ -1033,16 +1023,21 @@
                 <p> <a> <small> Investidores </small></a></p>
             </div>
 
+            <!-- Espaço para telefone de Compras por Telefone  -->
             <div class="footer_content">
-                <h4> Compras Telefone </h4>
+                <h4> Compras por Telefone </h4>
                 <p> <big> 0000 000 0000 </big> </p>
             </div>
 
         </div>
 
+        <!-- Lugar para selo de copyright da empresa  -->
         <div class="copyright_box">
+
+            <!-- Div para ter uma linha para dividir o conteúdo do copyright  -->
             <div class="dividing_row"> </div>
 
+            <!-- Mensagem de copyright  -->
             <p> <span> Todos os Direitos Reservados © </span> </p>
 
         </div>
@@ -1051,12 +1046,6 @@
 
 
 
-
-
-
-
-    <!-- Script da Página  -->
-    <script src="./script.js"> </script>
 
 
 </body>

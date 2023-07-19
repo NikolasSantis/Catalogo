@@ -194,13 +194,28 @@ a {
     align-items: center;
     width: 25%;
     position: relative;
-    transition: 2s;
+    transition: 3s;
+    animation-name: slide_rotate;
+    animation-delay: 6s;
+    animation-duration: 1.7s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
 }
 
 .slide img {
     width : 350px;
     height: 350px;
-    border-radius: 3px;
+    border-radius: 350px;
+}
+
+@keyframes slide_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 

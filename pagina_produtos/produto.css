@@ -7,12 +7,19 @@ body {
     margin: 0;
 }
 
+aside {
+    place-self: start ;
+    display: flex;
+    position: fixed;
+    z-index: 3;
+}
+
 main {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
-    flex: 1;
-    border: 0
+    top: 80px;
 }
 
 h1 {
@@ -23,24 +30,96 @@ a {
     text-decoration: none;
 }
 
-/* HEADER  */
+/* Barra lateral com webkit */
 
+#menu_icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Propriedades da barra lateral */
+#sidebar_container {
+    background-color: rgba(16, 16, 16, 0.5);
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    height: 100vh;
+    transition: all 0.5s;
+    overflow: auto;
+}
+
+/* Propriedades da lista (ul) da bara lateral  */
+#ul_sidebar {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    padding: 0;
+}
+
+/* width scrollbar ou largura do scroll da barra lateral */
+#sidebar_container::-webkit-scrollbar {
+    width: 9px;
+}
+  
+/* Track ou fundo da barra lateral */
+#sidebar_container::-webkit-scrollbar-track {
+    background: black; 
+}
+   
+/* Handle ou cursor da barra lateral */
+#sidebar_container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+}
+  
+/* Handle on hover ou cursor da barra lateral quando segurado */
+#sidebar_container::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+/* Irá fazer o botão desaparecer para melhor interface */
+#sidebar_button[type="checkbox"] {
+    display: none;
+}
+
+/* Fará com que a barra lateral apareça na tela quando o botão receber click */
+#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
+    transform: translateX(300px);
+}
+
+.url_sidebar {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.url_sidebar:hover {
+    background-color: rgb(200, 250, 245);
+    color: black;
+}
+
+#label_sidebar_button {
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* Header  */
+
+/* Propriedades do header  */
 #top_row {
     background-color: black;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* position: fixed;
-    box-shadow: 0 5px 10px 0; */
+    position: fixed;
+    box-shadow: 0 5px 10px 0;
     width: 100%;
     border-radius: 3px;
-}
-
-#menu_icon {
-    width: 50px;
-    margin-left: 15px;
-    border-radius: 25px;
-    cursor: pointer;
+    z-index: 2;
 }
 
 #company_name {
@@ -51,7 +130,11 @@ a {
     width: inherit;
 }
 
-/* FIM HEADER  */
+#text_container {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
 
 /* CONTAINER DO PRODUTO  */
 
@@ -117,6 +200,13 @@ a {
 }
 
 .alternative_images {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.alternative_images_1 {
     width: 80px;
     height: 80px;
     margin: 0 10px 10px 0;
@@ -307,7 +397,7 @@ a {
 .details {
     background-color: rgb(255, 255, 255);
     color: black;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif;
+    font-family: Arial, 'Times New Roman', Times, serif, Helvetica, sans-serif;
     width: 1080px;
     max-height: 740px;
     padding: 20px;

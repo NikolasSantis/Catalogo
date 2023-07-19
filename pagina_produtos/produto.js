@@ -222,3 +222,4 @@ box_main_image.addEventListener('mouseleave', () => {
     main_image.style.transformOrigin = 'center center';
     main_image.style.transform = 'scale(1)';
 });
+

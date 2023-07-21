@@ -194,21 +194,21 @@ a {
     align-items: center;
     width: 25%;
     position: relative;
-    transition: 3s;
-    animation-name: slide_rotate;
+    transition: 2s;
+    /* animation-name: slide_rotate;
     animation-delay: 6s;
     animation-duration: 1.7s;
     animation-timing-function: linear;
-    animation-direction: reverse;
+    animation-direction: reverse; */
 }
 
 .slide img {
     width : 350px;
     height: 350px;
-    border-radius: 350px;
+    border-radius: 3px;
 }
 
-@keyframes slide_rotate {
+/* @keyframes slide_rotate {
     from {
         transform: rotate(0deg);
     }
@@ -216,7 +216,7 @@ a {
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 
 /* CARROSSEL DE ITENS POPULARES  */

@@ -7,7 +7,7 @@
 // CSS: sintaxe normal, 2 linhas de diferença entre blocos,
 // 1 linha de diferença entre a identificação do bloco e o elemento sem/com comentário
 
-// ============= FALTA COMENAR O POPULAR ITEMS E AS CATEGORIAS ================= 
+// ============= FALTA COMENAR O CSS DO POPULAR ITEMS E AS CATEGORIAS ================= 
 
 // VERIFICAR SE HÁ A POSSIBILIDADE DE TROCAR O ID "top_row" PELA TAG "header"
 

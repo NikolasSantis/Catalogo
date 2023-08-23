@@ -1,12 +1,5 @@
 // Trocar cor do botão do carrossel
 
-// TROCAR NOME DO HTML DA PÁGINA INICIAL PARA HOME E DO CSS PARA HOME TBM
-
-// MUDAR OS COMENTÁRIOS PARA PORTUGUÊS BRASILEIRO 
-
-// CSS: sintaxe normal, 2 linhas de diferença entre blocos,
-// 1 linha de diferença entre a identificação do bloco e o elemento sem/com comentário
-
 // ============= FALTA COMENAR O CSS DO POPULAR ITEMS E AS CATEGORIAS ================= 
 
 // VERIFICAR SE HÁ A POSSIBILIDADE DE TROCAR O ID "top_row" PELA TAG "header"

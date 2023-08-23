@@ -232,6 +232,7 @@ li {
 
 /* CARROSSEL DE ITENS POPULARES  */
 
+/* Divisão para bloco da página */
 #popular_carousel {
     display: flex;
     flex-direction: row;
@@ -239,6 +240,7 @@ li {
     margin-bottom: 50px;
 }
 
+/* Retângulo de corte do carrossel para visualização */
 #popular_items{
     width: 1084px;
     padding: 20px;
@@ -246,6 +248,7 @@ li {
     overflow: hidden;
 }
 
+/* Título da seção */
 .title_row {
     color:rgb(255, 255, 255);
     display: flex;
@@ -254,6 +257,7 @@ li {
     margin-top: 50px;
 }
 
+/* Botão de navegação de lados do carrosséis  */
 .navigation_buttons {
     width: 50px;
     height: 154px;
@@ -261,6 +265,7 @@ li {
     margin-top: 50px;
 }
 
+/* Lista dos itens  */
 .carousel_popular_items {
     /* original width laptop: 1024p */
     display: flex;
@@ -271,6 +276,7 @@ li {
     transition-duration: 2s ;
 }
 
+/* Link do item */
 .item_container {
     background-color: white;
     padding: 0.5em;
@@ -278,6 +284,7 @@ li {
     margin-right: 20px;
 }
 
+/* Dados do produto */
 .item_box {
     background-color: white;
     display: flex;
@@ -286,22 +293,26 @@ li {
     height: 400px;
 }
 
+/* Imagem do item  */
 .item_img {
     width: 225px;
     height: 224px;
     padding: 10px 7.5px;
 }
 
+/* Dados em texto do item  */
 .item_data {
     padding-left: 2%;
 }
 
+/* Preço original do item (se estiver em promoção) */
 .original_price {
     color: rgb(63, 63, 63);
     display: flex;
     flex-direction: row;
 }
 
+/* Linha de preço atual e porcentagem de desconto  */
 .price_row {
     display: flex;
     flex-direction: row;
@@ -309,6 +320,7 @@ li {
     margin: 10px 0;    
 }
 
+/* Preço atual do item  */
 .item_price {
     color: black;
     max-width: 120px;
@@ -316,16 +328,19 @@ li {
     margin: 2px 0;
 }
 
+/* Porcentagem de desconto  */
 .percentage_off {
     color: red;
     margin: 2px 20px;
 }
 
+/* Número de parcelas e o valor das parcelas  */
 .price_divison{
     color: red;
     margin: 2px 0;
 }
 
+/* Nome do item  */
 .item_name {
     color: black;
     margin: 20px 0;
@@ -334,24 +349,28 @@ li {
 
 /* CLASSES PARA MOVER O POPULAR CARROSSEL  */
 
+/* Classe do primeiro lado do carrossel */
 .popular_items_carousel_side_1 {
     /* OBS: O margin-left será os width anteriores, mais 20px por cada lado */
     /* anterior em relação ao lado do carrossel que o usuário irá  */
     margin-left: 0;
 }
 
+/* Classe do segundo lado do carrossel */
 .popular_items_carousel_side_2 {
     /* Soma do tamanho do width do lado anterior, mais 20px */
     /* da margin-right do último item do lado anterior  */ 
     margin-left: -1104px;
 }
 
+/* Classe do terceiro lado do carrossel */
 .popular_items_carousel_side_3 {
     /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
     /* (20px + 20px) por ser 2 lados anteriores */
     margin-left: -2208px;
 }
 
+/* Classe do quarto lado do carrossel */
 .popular_items_carousel_side_4 {
     /* Soma do tamanho do width dos 2 lados anteriores, mais 40px */
     /* (20px + 20px) por ser 2 lados anteriores */

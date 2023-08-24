@@ -1,43 +1,58 @@
-/* Bloco de propriedades de tags */
-
 body {
     background-color: rgb(7, 65, 122);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
     width: auto;
     min-height: 100vh;
     font-family: arial, 'Times New Roman', Times, serif;
     margin: 0;
 }
 
+/* Barra lateral de navegação */
 aside {
-    place-self: start ;
-    display: flex;
     position: fixed;
     z-index: 3;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    top: 80px;
+/* Irá fazer a tag de botão desaparecer para melhor interface */
+#sidebar_button[type="checkbox"] {
+    display: none;
 }
 
-footer {
-    position: relative;
-    top: 180px;
+/* A barra lateral move para direita e aparece quando o botão receber click */
+#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
+    transform: translateX(300px);
 }
 
-h1 {
-    color: white;
+/* Label para a imagem ícone da barra lateral */
+#label_sidebar_button {
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
 }
 
-a {
-    text-decoration: none;
+/* Ícone do menu */
+#menu_icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Navegação da barra lateral */
+#sidebar_container {
+    background-color: rgba(16, 16, 16, 0.5);
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    height: 100vh;
+    transition: all 0.5s;
+    overflow: auto;
+}
+
+/* Lista (ul) da bara lateral  */
+#ul_sidebar {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    padding: 0;
 }
 
 ul {
@@ -51,33 +66,25 @@ li {
     padding: 0;
 }
 
-
-/* Barra lateral com webkit */
-
-#menu_icon {
-    width: 50px;
-    cursor: pointer;
+a {
+    text-decoration: none;
 }
 
-/* Propriedades da barra lateral */
-#sidebar_container {
-    background-color: rgba(16, 16, 16, 0.5);
-    position: absolute;
-    width: 300px;
-    left: -300px;
-    height: 100vh;
-    transition: all 0.5s;
-    overflow: auto;
+/* Links da lista da navegação  */
+.url_sidebar {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 5px;
 }
 
-/* Propriedades da lista (ul) da bara lateral  */
-#ul_sidebar {
-    list-style: none;
-    position: absolute;
-    width: 100%;
-    top: 70px;
-    padding: 0;
+/* Efeito para quando o mouse passar encima do link  */
+.url_sidebar:hover {
+    background-color: rgb(200, 250, 245);
+    color: black;
 }
+
+/* Bloco de webkit do cursor da barra lateral  */
 
 /* width scrollbar ou largura do scroll da barra lateral */
 #sidebar_container::-webkit-scrollbar {
@@ -100,43 +107,10 @@ li {
     background: white;
 }
 
-/* Irá fazer o botão desaparecer para melhor interface */
-#sidebar_button[type="checkbox"] {
-    display: none;
-}
-
-/* Fará com que a barra lateral apareça na tela quando o botão receber click */
-#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
-    transform: translateX(300px);
-}
-
-.url_sidebar {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 5px;
-}
-
-.url_sidebar:hover {
-    background-color: rgb(200, 250, 245);
-    color: black;
-}
-
-#label_sidebar_button {
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
-}
-
 
 /* Header  */
-
-/* Propriedades do header  */
-#top_row {
+header {
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     position: fixed;
     box-shadow: 0 5px 10px 0;
     width: 100%;
@@ -144,12 +118,28 @@ li {
     z-index: 2;
 }
 
+h1 {
+    color: white;
+}
+
+/* Nome da empresa do site  */
 #company_name {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: inherit;
+}
+
+
+/* Coneúdo principal  */
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    top: 80px;
 }
 
 #text_container {
@@ -505,13 +495,14 @@ li {
 
 /* Footer  */
 
-#footer_box {
+footer {
     background-color: black;
     color: white;
+    position: relative;
     width: 100%;
     height: 300px;
-    place-self: baseline normal;
     padding-top: 50px;
+    top: 180px;
 }
 
 #footer_content_box {

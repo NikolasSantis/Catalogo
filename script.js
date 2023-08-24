@@ -2,7 +2,6 @@
 
 // ============= FALTA COMENAR O CSS DO POPULAR ITEMS E AS CATEGORIAS ================= 
 
-// VERIFICAR SE HÁ A POSSIBILIDADE DE TROCAR O ID "top_row" PELA TAG "header"
 
 // PARA FAZER A IMAGEM RODAR NO SLIDER: https://blog.matheuscastiglioni.com.br/criando-animacoes-com-css3/ 
 

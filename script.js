@@ -2,7 +2,6 @@
 
 // ============= FALTA COMENAR O CSS DO POPULAR ITEMS E AS CATEGORIAS ================= 
 
-
 // PARA FAZER A IMAGEM RODAR NO SLIDER: https://blog.matheuscastiglioni.com.br/criando-animacoes-com-css3/ 
 
 

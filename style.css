@@ -6,6 +6,8 @@ body {
     margin: 0;
 }
 
+/* Barra de navegação  */
+
 /* Barra lateral de navegação */
 aside {
     position: fixed;
@@ -39,8 +41,8 @@ aside {
 #sidebar_container {
     background-color: rgba(16, 16, 16, 0.5);
     position: absolute;
-    width: 300px;
     left: -300px;
+    width: 300px;
     height: 100vh;
     transition: all 0.5s;
     overflow: auto;
@@ -50,8 +52,8 @@ aside {
 #ul_sidebar {
     list-style: none;
     position: absolute;
-    width: 100%;
     top: 70px;
+    width: 100%;
     padding: 0;
 }
 
@@ -112,9 +114,9 @@ a {
 header {
     background-color: black;
     position: fixed;
-    box-shadow: 0 5px 10px 0;
     width: 100%;
     border-radius: 3px;
+    box-shadow: 0 5px 10px 0;
     z-index: 2;
 }
 
@@ -134,30 +136,24 @@ h1 {
 
 /* Coneúdo principal  */
 
+/* Ordenado em coluna, top:80px para afastar do header  */
 main {
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
     top: 80px;
+    align-items: center;
 }
-
-#text_container {
-    display: flex;
-    flex-direction: column;
-    width: 360px;
-}
-
 
 /* Slider inicial */
 
-/* Propriedades do bloco de slider  */
+/* Delimitador do bloco de slider na página */
 #slider_container {
-    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
+    width: 80%;
     padding: 50px 0 0 200px;
 }
 
@@ -173,22 +169,24 @@ main {
     color: white;
 }
 
-
+/* Slide aparante na tela */
 #slider {
-    margin: 0 auto;
     width: 400px;
     height: 400px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
+/* Todos os 4 slides */
 #slides {
-    width: 400%;
-    height: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 400%;
+    height: 400px;
 }
 
+/* Tag div dos slides, para melhor manipulação do espaço da imagem */
 .slide {
     display: flex;
     flex-direction: column;
@@ -203,12 +201,14 @@ main {
     animation-direction: reverse; */
 }
 
+/* Ajustando tamanho das imagens em si  */
 .slide img {
     width : 350px;
     height: 350px;
     border-radius: 3px;
 }
 
+/* Protótipo de animação  */
 /* @keyframes slide_rotate {
     from {
         transform: rotate(0deg);
@@ -222,7 +222,7 @@ main {
 
 /* CARROSSEL DE ITENS POPULARES  */
 
-/* Divisão para bloco da página */
+/* Delimitador para bloco da página */
 #popular_carousel {
     display: flex;
     flex-direction: row;
@@ -368,12 +368,10 @@ main {
 
 }
 
-/* FIM POPULAR ITENS  */
-
-
 
 /* CATEGORIES  */
 
+/* Delimitador de bloco da página  */
 #categories {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
@@ -385,18 +383,31 @@ main {
     margin: 45px 20px;
 }
 
+/* Retângulo visível para o usuário */
 #categories_carousel{
     width: 850px;
     margin: 0;
     overflow: hidden;
 }
 
+
+
+
+/* ----------------------------------------------------- */
+/* --------------- PAUSA, CONTINUAR AMANHÃ  ------------ */
+/* ----------------------------------------------------- */
+
+
+
+
+
+
+/* Todos os itens do carrossel */
 .carousel_categories {
-    /* original width laptop: 1024p */
+    /* original width laptop: 1024p (usada para cálculo) */
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-between; */
     width: 4396px;
     transition-duration: 2s ;
 } 

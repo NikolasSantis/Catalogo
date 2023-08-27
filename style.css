@@ -220,7 +220,7 @@ main {
 } */
 
 
-/* CARROSSEL DE ITENS POPULARES  */
+/* Carrossel de itens populares */
 
 /* Delimitador para bloco da página */
 #popular_carousel {
@@ -369,7 +369,7 @@ main {
 }
 
 
-/* CATEGORIES  */
+/* Categorias  */
 
 /* Delimitador de bloco da página  */
 #categories {
@@ -390,18 +390,6 @@ main {
     overflow: hidden;
 }
 
-
-
-
-/* ----------------------------------------------------- */
-/* --------------- PAUSA, CONTINUAR AMANHÃ  ------------ */
-/* ----------------------------------------------------- */
-
-
-
-
-
-
 /* Todos os itens do carrossel */
 .carousel_categories {
     /* original width laptop: 1024p (usada para cálculo) */
@@ -412,12 +400,14 @@ main {
     transition-duration: 2s ;
 } 
 
+/* Bloco das categorias */
 .categories_box {
     display: flex;
     flex-direction: column;
     height: 200px;
 }
 
+/* Imagens das categorias */
 .categories_icons {
     width: 150px;
     border-radius: 75px;
@@ -425,6 +415,7 @@ main {
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Nome da categoria */
 .categorie_name {
     color: white;
     display: flex;
@@ -448,9 +439,9 @@ main {
 }
 
 
-/* Decorations Section */
+/* Decorações  */
 
-/* Propriedades do container de decorações */
+/* Delimita a seção na página */
 #decorations_container {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
@@ -506,6 +497,7 @@ main {
 
 /* Footer  */
 
+/* Delimita o fotter na página  */
 footer {
     background-color: black;
     color: white;
@@ -516,16 +508,19 @@ footer {
     top: 180px;
 }
 
+/* Linha de links do footer */
 #footer_content_box {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
+/* Tópicos do footer */
 .footer_content {
     text-align: center;
 }
 
+/* Copyright  */
 .copyright_box {
     display: flex;
     flex-direction: column;
@@ -535,10 +530,10 @@ footer {
     width: auto;
 }
 
+/* Linha divisora dos links do footer do copytight */
 .dividing_row {
     background-color: white;
     height: 1px;
     width: 700px;
 }
 
-/* FIM FOOTER */

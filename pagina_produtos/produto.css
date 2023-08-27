@@ -7,55 +7,76 @@ body {
     margin: 0;
 }
 
+/* Barra de navegação  */
+
+/* Barra lateral de navegação */
 aside {
-    place-self: start ;
-    display: flex;
     position: fixed;
     z-index: 3;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    top: 80px;
+/* Irá fazer a tag de botão desaparecer para melhor interface */
+#sidebar_button[type="checkbox"] {
+    display: none;
 }
 
-h1 {
-    color: white;
+/* A barra lateral move para direita e aparece quando o botão receber click */
+#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
+    transform: translateX(300px);
+}
+
+/* Label para a imagem ícone da barra lateral */
+#label_sidebar_button {
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Ícone do menu */
+#menu_icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Navegação da barra lateral */
+#sidebar_container {
+    background-color: rgba(16, 16, 16, 0.5);
+    position: absolute;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    transition: all 0.5s;
+    overflow: auto;
+}
+
+/* Lista (ul) da bara lateral  */
+#ul_sidebar {
+    list-style: none;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-/* Barra lateral com webkit */
-
-#menu_icon {
-    width: 50px;
-    cursor: pointer;
+/* Links da lista da navegação  */
+.url_sidebar {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 5px;
 }
 
-/* Propriedades da barra lateral */
-#sidebar_container {
-    background-color: rgba(16, 16, 16, 0.5);
-    position: absolute;
-    width: 300px;
-    left: -300px;
-    height: 100vh;
-    transition: all 0.5s;
-    overflow: auto;
+/* Efeito para quando o mouse passar encima do link  */
+.url_sidebar:hover {
+    background-color: rgb(200, 250, 245);
+    color: black;
 }
 
-/* Propriedades da lista (ul) da bara lateral  */
-#ul_sidebar {
-    list-style: none;
-    position: absolute;
-    width: 100%;
-    top: 70px;
-    padding: 0;
-}
+/* Bloco de webkit do cursor da barra lateral  */
 
 /* width scrollbar ou largura do scroll da barra lateral */
 #sidebar_container::-webkit-scrollbar {
@@ -78,43 +99,11 @@ a {
     background: white;
 }
 
-/* Irá fazer o botão desaparecer para melhor interface */
-#sidebar_button[type="checkbox"] {
-    display: none;
-}
-
-/* Fará com que a barra lateral apareça na tela quando o botão receber click */
-#sidebar_button[type="checkbox"]:checked ~ #sidebar_container {
-    transform: translateX(300px);
-}
-
-.url_sidebar {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 5px;
-}
-
-.url_sidebar:hover {
-    background-color: rgb(200, 250, 245);
-    color: black;
-}
-
-#label_sidebar_button {
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
-}
-
-
 /* Header  */
 
 /* Propriedades do header  */
-#top_row {
+header {
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     position: fixed;
     box-shadow: 0 5px 10px 0;
     width: 100%;
@@ -122,6 +111,11 @@ a {
     z-index: 2;
 }
 
+h1 {
+    color: white;
+}
+
+/* Nome da empresa do site */
 #company_name {
     display: flex;
     flex-direction: column;
@@ -130,14 +124,20 @@ a {
     width: inherit;
 }
 
-#text_container {
+/* Conteúdo principal */
+
+/* Ordenado em coluna, top:80px para afastar do header */
+main {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    position: relative;
+    align-items: center;
+    top: 80px;
 }
 
-/* CONTAINER DO PRODUTO  */
+/* Container do produto */
 
+/* Delimitador do anúncio */
 #product_container {
     background-color: rgba(255, 255, 255, 0.13);
     display: flex;
@@ -148,6 +148,7 @@ a {
     border-radius: 10px;
 }
 
+/* Delimitador das imagens alternativas do produto */
 #other_images_product {
     display: flex;
     flex-direction: row;
@@ -155,6 +156,15 @@ a {
     justify-content: space-around;    
 }
 
+/* Classe das outras imagens do produto */
+.alternative_images {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+/* Delimitador da imagem principal */
 #box_main_image {
     overflow: hidden;
     width: 580px;
@@ -162,6 +172,7 @@ a {
     cursor: zoom-in;
 }
 
+/* Imagem principal */
 #main_image {
     transform-origin: center center;
     object-fit: cover;
@@ -169,16 +180,27 @@ a {
     height: 100%;
 }
 
+/* Todas as imagens do produto */
 #images_product {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Descrição do produto */
+#product_initial_description {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 50px;
+}
+
+/* Preço atual do produto */
 #atual_price {
     margin-top: 50px;
 }
 
+/* Botão de comprar */
 #buy_button {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -189,6 +211,7 @@ a {
     border-radius: 5px
 }
 
+/* Botão de adicionar ao carrinho */
 #add_cart {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -199,32 +222,7 @@ a {
     border-radius: 5px
 }
 
-.alternative_images {
-    width: 80px;
-    height: 80px;
-    margin: 0 10px 10px 0;
-    cursor: pointer;
-}
-
-.alternative_images_1 {
-    width: 80px;
-    height: 80px;
-    margin: 0 10px 10px 0;
-    cursor: pointer;
-}
-
-.product_img {
-    width: 580px;
-    height: 480px;
-}
-
-.product_initial_description {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin-left: 50px;
-}
-
+/* Linha de seraparção, apenas estética  */
 .separator {
     background-color:rgba(255, 255, 255, 0.731);
     width: 100%;
@@ -232,6 +230,7 @@ a {
     margin-top: 20px;
 }
 
+/* Alguma informação adicional */
 .aditional_info {
     margin-top: 30px;
     width: 480px;
@@ -239,11 +238,8 @@ a {
     overflow-y: auto;
 }
 
-
-/* FIM CONTAINER PRODUTO  */
-
-/* CLASS AD  */
-
+/* Classe para anúncios do site */
+/* Estão aparentes para demonstração */
 .ad {
     background-color: rgba(255, 255, 255, 0.13);
     color: white;
@@ -257,9 +253,11 @@ a {
     margin: 50px 0 50px 0;
 }
 
-/* FIM CLASS AD  */
+/* Recomendados */
 
-/* RECOMENDADOS */
+/* Ao contrário do index.html, nessa página estão em classes, */
+/* para poder repetir mais de uma vez na página */
+
 
 .popular_carousel {
     display: flex;

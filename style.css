@@ -110,7 +110,7 @@ a {
 }
 
 
-/* Header  */
+/* Header */
 header {
     background-color: black;
     position: fixed;
@@ -136,7 +136,7 @@ h1 {
 
 /* Coneúdo principal  */
 
-/* Ordenado em coluna, top:80px para afastar do header  */
+/* Ordenado em coluna, top:80px para afastar do header */
 main {
     display: flex;
     flex-direction: column;
